@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(100, 161, 197);
+}
+
+h1 {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(29, 63, 138);
+  padding-top: 15px;
+  padding-bottom: 17px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 24px;
+}
+
+#main-div {
+  margin: 200px auto;
+  height: 420px;
+  background-color: white;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
+#price-div {
+  margin: 40px 14px 20px;
+}
+
+input,
+#drop-down {
+  display: block;
+  opacity: 90%;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #7777;
+  padding: 10px 10px 10px 13px;
+  font-size: 16px;
+}
+
+.labels {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#people-div,
+#service-div {
+  margin: 10px 14px 20px;
+}
+
+button {
+  display: block;
+  margin: 20px auto 10px;
+  width: 80%;
+  height: 40px;
+  background-color: rgb(29, 63, 138);
+  color: white;
+  font-size: 18px;
+  border: 1px solid #7777;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(64, 107, 201);
+}
+
+#drop-down {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+
+option {
+  font-size: 20px;
+}
+
+#no-price,
+#no-people,
+#no-tip {
+  display: none;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+#no-tip {
+  padding-bottom: 5px;
+}
+
+#no-div {
+  display: none;
+  background-color: rgb(216, 129, 129);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: auto;
+  padding-top: 30px;
+}
+
+#total-div {
+  text-align: center;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.total {
+  font-size: 22px;
+  padding-bottom: 15px;
+  display: none;
+}
+
+#loading {
+  width: 170px;
+  height: 140px;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: none;
+}
+
+@media only screen and (min-device-width: 480px) {
+  button {
+    margin-bottom: 5px;
+  }
+  #main-div {
+    height: auto;
+    width: 90vw;
+  }
+  .total {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) {
+  #main-div {
+    height: auto;
+  }
+}

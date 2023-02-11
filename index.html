@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="refresh" content="600" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="my-form">
+      <div id="main-div">
+        <h1>TIP CALCULATOR</h1>
+        <div id="no-div">
+          <p id="no-price"></p>
+          <p id="no-people"></p>
+          <p id="no-tip"></p>
+        </div>
+        <div id="price-div">
+          <label class="labels" for="textIn">How Much Was Your Bill?</label>
+          <input id="textIn" type="text" name="price" />
+        </div>
+        <div id="people-div">
+          <label class="labels" for="people-input"
+            >How Many People Are Sharing The Bill?</label
+          >
+          <input id="people-input" type="text" name="people" />
+        </div>
+        <div id="service-div">
+          <label class="labels" for="drop-down">How Was Your Service</label>
+          <select id="drop-down" name="select-options">
+            <option value="0">Choose...</option>
+            <option value="20">Great - 20%</option>
+            <option value="10">Good - 10%</option>
+            <option value="2">Bad - 2%</option>
+          </select>
+          <button type="submit">Calculate</button>
+          <div id="total-div">
+            <img
+              id="loading"
+              src="https://media3.giphy.com/media/xFmuT64Jto3mRO4w3G/giphy.gif?cid=ecf05e4763buzdd4p6nlwjltqba61hetap03rqww605i2lwv&rid=giphy.gif&ct=g"
+              alt="waiting/loading"
+            />
+            <p id="tip-amount" class="total"></p>
+            <p id="total-amount" class="total"></p>
+            <p id="per-person" class="total"></p>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>
