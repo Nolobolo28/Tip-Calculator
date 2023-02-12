@@ -36,14 +36,12 @@ function handForm(ev) {
   let myForm = ev.target;
   let fd = new FormData(myForm); // the for loop checks for any empty values and adds their key to an array
   for (const [key, value] of fd) {
-    if (value == 0) {
+    if (value === 0) {
       emptyKey.push(key);
     } else {
       data.push(value);
     }
   }
-  console.log(emptyKey);
-  console.log(data);
   if (emptyKey.length > 0) {
     emptyChecker();
   } else if (emptyKey.length === 0) {
@@ -62,25 +60,25 @@ function clear() {
   totalDiv.style.display = "none";
   data = [];
   emptyKey = [];
-  document.location.reload();
-  document.querySelector("#my-form").reset(); //this resets the form's input field to the default
+  document.location.reload();  //this will refresh the page resetting the form and loading gif
   clearTimeout();
 }
 
 function calculate() {
-  let price = parseFloat(data[0]);
+  let price = parseFloat(data[0]); //setting the price to a float incase of common prices like 32.59
   let people = parseInt(data[1]);
   let percentage = parseInt(data[2]);
   const tipAmount = (price / 100) * percentage;
+  const tipAmountRounded = tipAmount.toFixed(2);
   const total = price + tipAmount;
   let totalRounded = total.toFixed(2);
-  const perPerson = total / people;
+  const perPerson = totalRounded / people;
   let perPersonRounded = perPerson.toFixed(2);
-  mainDiv.style.height = "550px";
+  mainDiv.style.height = "550px"; //this is expanding the container to fit the loader and extra text
   loading.style.display = "none";
-  totalDiv.style.display = "block";
+  totalDiv.style.display = "block"; //making the text or tip amount total and per person visible
   tip.style.display = "block";
-  tip.textContent = `Tip Amount $ ${tipAmount}`;
+  tip.textContent = `Tip Amount $ ${tipAmountRounded}`;
   totalAmount.style.display = "block";
   totalAmount.textContent = `The Total Bill is $ ${totalRounded}`;
   individualOwed.style.display = "block";
