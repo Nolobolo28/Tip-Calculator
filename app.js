@@ -36,11 +36,14 @@ function handForm(ev) {
   let myForm = ev.target;
   let fd = new FormData(myForm); // the for loop checks for any empty values and adds their key to an array
   for (const [key, value] of fd) {
-    if (value === 0) {
+    console.log(value);
+    if (value == 0) {
       emptyKey.push(key);
     } else {
       data.push(value);
     }
+    console.log(emptyKey);
+    console.log(data);
   }
   if (emptyKey.length > 0) {
     emptyChecker();
@@ -60,7 +63,7 @@ function clear() {
   totalDiv.style.display = "none";
   data = [];
   emptyKey = [];
-  document.location.reload();  //this will refresh the page resetting the form and loading gif
+  document.location.reload(); //this will refresh the page resetting the form and loading gif
   clearTimeout();
 }
 
