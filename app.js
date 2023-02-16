@@ -13,7 +13,7 @@ const loading = document.querySelector("#loading");
 //fix button breakpoint
 
 function emptyChecker() {
-  mainDiv.style.height = "550px";
+  mainDiv.style.height = "580px";
   noDiv.style.display = "block";
   emptyKey.forEach((item) => {
     if (item == "price") {
@@ -77,7 +77,7 @@ function calculate() {
   let totalRounded = total.toFixed(2);
   const perPerson = totalRounded / people;
   let perPersonRounded = perPerson.toFixed(2);
-  mainDiv.style.height = "550px"; //this is expanding the container to fit the loader and extra text
+  mainDiv.style.height = "570px"; //this is expanding the container to fit the loader and extra text
   loading.style.display = "none";
   totalDiv.style.display = "block"; //making the text or tip amount total and per person visible
   tip.style.display = "block";

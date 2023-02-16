@@ -22,9 +22,8 @@ h1 {
 
 #main-div {
   margin: 200px auto;
-  height: 420px;
   background-color: white;
-  max-width: 700px;
+  width: 35vw;
   border-radius: 10px;
 }
 
@@ -48,7 +47,7 @@ input,
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #people-div,
@@ -108,7 +107,7 @@ option {
 #total-div {
   text-align: center;
   height: 60px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .total {
@@ -125,21 +124,45 @@ option {
   display: none;
 }
 
-@media only screen and (min-device-width: 480px) {
+@media (max-width: 480px) {
   button {
     margin-bottom: 5px;
-  }
-  #main-div {
-    height: auto;
-    width: 90vw;
   }
   .total {
     font-size: 20px;
   }
+  #main-div {
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 90vw;
+  }
 }
 
-@media only screen and (min-device-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   #main-div {
-    height: auto;
+    margin: 140px auto;
+    background-color: white;
+    width: 80vw;
+    border-radius: 10px;
+  }
+  .labels {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  #drop-down {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+  }
+  #loading {
+    width: 140px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: none;
   }
 }
